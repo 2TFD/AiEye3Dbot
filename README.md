@@ -5,3 +5,4 @@
   CrypToken - токен для оплаты через @CryptoBot 
     для получения перейдите в @CryptoBot /start ,  Crypto Pay ,  Создать приложение , api токен
   FastServer - ссылка на сайт 'Fastapi'
+  NGROK_AUTH_TOKEN  - 
