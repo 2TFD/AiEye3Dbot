@@ -8,19 +8,20 @@ from fastapi.staticfiles import StaticFiles
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from starlette.requests import Request
 from starlette.templating import Jinja2Templates
+from cfg import NGROK_AUTH_TOKEN
 import os
 import shutil
 import uuid
 import aiofiles
 
 
-NGROK_AUTH_TOKEN = ("2tENDM10PgJfd3yylSiZGdvYMHx_2ajCcwQnZ2A5VJRrjdDYx", "")
+NGROK_AUTH_TOKE = (NGROK_AUTH_TOKEN, "")
 NGROK_EDGE = ("NGROK_EDGE", "edge:edghts_")
 APPLICATION_PORT = 8000
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    ngrok.set_auth_token(NGROK_AUTH_TOKEN)
+    ngrok.set_auth_token(NGROK_AUTH_TOKE)
     ngrok.forward(
         addr=APPLICATION_PORT,
         labels=NGROK_EDGE,
