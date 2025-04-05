@@ -1,5 +1,5 @@
 TOKEN = '' #telegram token
-admins = 
+admins = 1
 hf_token = '' #huggingface token
 CrypToken = '' # token crypto bot
 FastServer = '' # website link
